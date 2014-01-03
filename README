@@ -1,0 +1,12 @@
+So far:
+
+A simple script to move files between two directories.
+
+Asks for the user's input to search different directories and locate where the file originates from and where it is to be placed. Renames the file in the process.
+
+Date: 2014-01-01
+ Author: Alexander Roth
+
+TODO: Add multiple file movement. 
+TODO: Multiple file recognition based on file formatting. 
+TODO: Renaming files based on given format.
