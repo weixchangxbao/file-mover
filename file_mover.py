@@ -2,7 +2,7 @@
 """ A simple script to move files between two directories.
 
 Asks for the user's input to search different directories and locate where
-the file originates from and where it is to be placed. Renames the file 
+the file originates from and where it is to be placed. Renames the file
 in the process.
 
 Date: 2014-01-01
@@ -21,7 +21,7 @@ def move(src, dst):
 
     Args:
        src: The name of the source file directory.
-       dst: The name of the destination file directory. 
+       dst: The name of the destination file directory.
     """
 
     src_fname = raw_input("What file are you looking for? ")
@@ -60,13 +60,14 @@ def locate(directory):
     else:
         raise IOError("Directory does not exist")
 
+
 def main():
-	src = raw_input("What is the source directory? ")
-	dst = raw_input("What is the destination directory? ")
-	start = locate(src)
-	end = locate(dst)
-	move(start, end)
+    src = raw_input("What is the source directory? ")
+    dst = raw_input("What is the destination directory? ")
+    start = locate(src)
+    end = locate(dst)
+    move(start, end)
 
 if __name__ == '__main__':
-	status = main()
-	sys.exit(status)
+    status = main()
+    sys.exit(status)
