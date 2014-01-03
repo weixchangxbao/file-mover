@@ -50,6 +50,7 @@ def locate(directory):
     Raises:
         IOError: The directory does not exist
     """
+    #TODO make more general, currently specific to my file hierachy.
     search_term = "find /Users/aisaacroth/Documents -name " + directory
     search_result = os.popen(search_term)
     location = search_result.readline()
