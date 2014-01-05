@@ -114,7 +114,14 @@ def reformat(src_list, style=None):
 
 
 def get_modification_date(filename):
-    """Returns the creation date and time of the file. """
+    """Returns the creation date and time of the file. 
+
+    Args:
+        filename: The filename to which the timestamp is coming from.
+
+    Returns:
+        The timestamp of the file's creation time.
+    """
     temp = os.path.getctime(filename)
     return datetime.fromtimestamp(temp)
 
