@@ -1,12 +1,33 @@
-So far:
+Date: 2014-01-01
+
+file_mover.py
 
 A simple script to move files between two directories.
 
 Asks for the user's input to search different directories and locate where the file originates from and where it is to be placed. Renames the file in the process.
 
-Date: 2014-01-01
- Author: Alexander Roth
+Author: Alexander Roth
 
-TODO: Add multiple file movement. 
-TODO: Multiple file recognition based on file formatting. 
-TODO: Renaming files based on given format.
+#TODO: Generalization for search functionality.
+-------------------------------------------------------------------------------
+Date: 2014-01-03
+
+multifile_mover.PY
+
+A script to move multiple files bewteen two directories.
+
+Asks for user's input to locate source and destination directories. When the 
+directories are located, the program then asks for the names of the files which
+are meant to be moved. If no files are selected, all files (.pdf, .doc, .png)
+will be selected. The program then asks for user-defined style with an 
+incrementor attached at the end. If there is no user-defined sytle, then the 
+files are reformated with their creation timestamp. The files are then moved
+to the destination directory.
+
+Author: Alexander Roth
+
+#TODO: Generalization for search functionality.
+#TODO: BoogieBoard_mover
+
+
+
