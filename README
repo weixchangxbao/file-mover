@@ -4,7 +4,9 @@ file_mover.py
 
 A simple script to move files between two directories.
 
-Asks for the user's input to search different directories and locate where the file originates from and where it is to be placed. Renames the file in the process.
+Asks for the user's input to search different directories and locate where the
+file originates from and where it is to be placed. Renames the file in the 
+process.
 
 Author: Alexander Roth
 
@@ -28,6 +30,8 @@ Author: Alexander Roth
 
 #TODO: Generalization for search functionality.
 #TODO: BoogieBoard_mover
+
+-------------------------------------------------------------------------------
 
 
 
