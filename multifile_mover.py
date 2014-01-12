@@ -55,7 +55,7 @@ def move(src_dir, dst_dir, src_files, dst_files):
         shutil.move(src_path, dst_path)
 
 
-def recognize(src_names = None):
+def recognize(src_names=None):
     """Recognizes file names from user input.
 
     Args:
@@ -108,13 +108,13 @@ def reformat(src_list, style=None):
         for src in src_list:
             index = src.index(".")
             extension = src[index:]
-            dst_list.append(str(get_modification_date(src.strip())) + 
+            dst_list.append(str(get_modification_date(src.strip())) +
                             extension)
     return dst_list
 
 
 def get_modification_date(filename):
-    """Returns the creation date and time of the file. 
+    """Returns the creation date and time of the file.
 
     Args:
         filename: The filename to which the timestamp is coming from.
@@ -129,7 +129,7 @@ def get_modification_date(filename):
 def main():
 
     # Store the home directory.
-    home = os.getcwd() 
+    home = os.getcwd()
     src = raw_input("What is the source directory?\n")
     dst = raw_input("What is the destination directory?\n")
 
