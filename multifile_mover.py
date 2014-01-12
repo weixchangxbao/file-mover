@@ -55,7 +55,7 @@ def move(src_dir, dst_dir, src_files, dst_files):
         shutil.move(src_path, dst_path)
 
 
-def recognize(src_names=None):
+def recognize(src_names = None):
     """Recognizes file names from user input.
 
     Args:
