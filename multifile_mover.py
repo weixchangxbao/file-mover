@@ -15,10 +15,11 @@ import glob
 from datetime import datetime
 
 
-def locate(directory):
+def locate(path, directory):
     """Returns the location of a file system directory.
 
     Args:
+        path: The path to the directory being searched for.
         directory: The name of the directory being searched for.
 
     Returns:
@@ -27,8 +28,8 @@ def locate(directory):
     Raises:
         IOError: The directory does not exist
     """
-    #TODO make more general, currently specific to my file hierachy.
-    search_term = "find /Users/aisaacroth/Documents -name " + directory
+    search_term = "find {search} -name {dir}".format(search = path, 
+                                                   dir=directory)
     search_result = os.popen(search_term)
     location = search_result.readline().strip()
 
@@ -71,7 +72,7 @@ def recognize(src_names=None):
     """
     file_list = []
     if src_names:
-        file_list = src_names.split(",")
+        file_list = src_names.split("|")
         print file_list
     else:
         types = ('*.pdf', '*.png', '*.doc')
@@ -131,18 +132,20 @@ def main():
     # Store the home directory.
     home = os.getcwd()
     src = raw_input("What is the source directory?\n")
+    src_path = raw_input("What is the path to the source directory?\n")
     dst = raw_input("What is the destination directory?\n")
+    dst_path = raw_input("What is the path to the destination directory?\n")
 
     # Locate both source and destination directory.
-    start = locate(src)
-    end = locate(dst)
+    start = locate(src_path, src)
+    end = locate(dst_path, dst)
 
     # Change to source directory to manipulate files.
     os.chdir(start)
     file_response = raw_input("If you know all the names of the files you are "
-                              "looking for,\nplease enter them now. If you "
-                              "want to move all files in the\nsource "
-                              "directory, please press ENTER\n")
+                              "looking for,\nplease enter them now with a | as a delimiter. If you "
+                              "want\nto move all files in the source "
+                              "directory, please press ENTER:\n")
 
     if file_response:
         src_files = recognize(file_response)
