@@ -38,10 +38,11 @@ def move(src, dst):
     shutil.move(src_path, dst_path)
 
 
-def locate(directory):
+def locate(path, directory):
     """Returns the location of a file system directory.
 
     Args:
+        path: The path to the directory being searched for.
         directory: The name of the directory being searched for.
 
     Returns:
@@ -50,8 +51,7 @@ def locate(directory):
     Raises:
         IOError: The directory does not exist
     """
-    #TODO make more general, currently specific to my file hierachy.
-    search_term = "find /Users/aisaacroth/Documents -name " + directory
+    search_term = "find {search} -name {dir} ".format(search = path, dir = directory)
     search_result = os.popen(search_term)
     location = search_result.readline()
 
@@ -62,10 +62,12 @@ def locate(directory):
 
 
 def main():
-    src = raw_input("What is the source directory? ")
-    dst = raw_input("What is the destination directory? ")
-    start = locate(src)
-    end = locate(dst)
+    src = raw_input("What is the source directory?\n")
+    src_path = raw_input("What is the path to the source directory?\n")
+    dst = raw_input("What is the destination directory?\n")
+    dst_path = raw_input("What is the path to the destination directory?\n")
+    start = locate(src_path, src)
+    end = locate(dst_path, dst)
     move(start, end)
 
 if __name__ == '__main__':
