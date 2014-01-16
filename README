@@ -10,7 +10,7 @@ process.
 
 Author: Alexander Roth
 
-#TODO: Generalization for search functionality.
+#TODO: Make search function more user-friendly.
 -------------------------------------------------------------------------------
 Date: 2014-01-03
 
@@ -28,7 +28,7 @@ to the destination directory.
 
 Author: Alexander Roth
 
-#TODO: Generalization for search functionality.
+#TODO: Make search function more user-friendly.
 #TODO: BoogieBoard_mover
 
 -------------------------------------------------------------------------------
