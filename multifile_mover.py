@@ -103,7 +103,7 @@ def reformat(src_list, style=None):
 
             index = src.index(".")
             extension = src[index:]
-            dst_list.append(style + ", " + str(count) + extension)
+            dst_list.append(style + str(count) + extension)
             count += 1
     else:
         for src in src_list:
